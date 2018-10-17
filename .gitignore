@@ -27,4 +27,4 @@
 # Ignoring PDF produced during testing
 # Only the production PDF needs to be pushed (./LaTeX-For-The-IB.pdf)
 
-./src/LaTeX-For-The-IB.pdf
+src/LaTeX-For-The-IB.pdf

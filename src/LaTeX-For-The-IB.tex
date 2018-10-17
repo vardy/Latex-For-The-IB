@@ -1,35 +1,63 @@
-\documentclass[12pt]{article}
+\documentclass[12pt,a4paper]{article}
+
+% =========================================
+%             PREAMBLE
+% =========================================
 
 % Packages
-\usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[utf8]{inputenc} % International characters
+\usepackage[T1]{fontenc} % Font encoding for international characters
 \usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage{geometry} % Setting page geometry (margins)
+\usepackage{blindtext} % Lorem ipsum
 
-% Document begins
+% Document Settings
+\geometry{margin=1in}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+
+% =========================================
+%             DOCUMENT
+% =========================================
+
 \begin{document}
 
-% Titlepage begins -- supresses headers, footers, and pagenumbers.
+% =========================
+%      TITLE PAGE
+% =========================
+
+% Supresses headers, footers, and pagenumbers on titlepage.
 \begin{titlepage}
-\centering
-\scshape
+\centering % Centers page
+\scshape % Small-caps text
 \vfill
 
-\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal rule
-\rule{\textwidth}{0.4pt} % Thin horizontal rule
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{\textwidth}{0.4pt}
 
-\vspace{0.75\baselineskip} % Whitespace
+\vspace{1.75\baselineskip} % Whitespace
 \LARGE{LaTeX for the IB}
 \vspace{0.75\baselineskip} % Whitespace
 
-\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal rule
-\rule{\textwidth}{1.6pt} % Thick horizontal rule
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+\rule{\textwidth}{1.6pt}
 
 \vfill
 \end{titlepage}
 
-Hello, world!
+% =========================
+%      DOCUMENT BODY
+% =========================
 
-Yeet
+\blindtext
 
-Testing
 \end{document}
+
+% TODO:
+% 
+% Structure:
+%   Title-page
+%   Contributors + License
+%   Contents
+%   Body
+%   Bibliography?
