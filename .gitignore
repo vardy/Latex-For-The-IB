@@ -1,3 +1,5 @@
+# File-extensions universal ignores
+
 *.aux
 *.glo
 *.idx
@@ -21,3 +23,8 @@
 *.mtc1
 *.out
 *.synctex.gz
+
+# Ignoring PDF produced during testing
+# Only the production PDF needs to be pushed (./LaTeX-For-The-IB.pdf)
+
+./src/LaTeX-For-The-IB.pdf
