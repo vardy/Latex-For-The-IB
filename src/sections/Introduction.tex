@@ -1,6 +1,6 @@
-\section{About \LaTeX}  % Here comes my translated file
+\section{About LaTeX}  % Here comes my translated file
 
-First of all, let's clear up what \LaTeX{} is and what it is not. It is
+First of all, let's clear up what LaTeX is and what it is not. It is
 
 \begin{itemize}
   \item typesetting system,
@@ -18,11 +18,11 @@ but it is not
 
 In a nutshell, you create a \textit{.tex} file (normal text file with different extension), run a converter and out pops a nicely formatted \textit{.pdf} file. But for the software to know what to do, you need to structure your file appropriately.
 
-Few advantages of \LaTeX{} being mostly text files are that it is lightweight to share and easy to use with version control. And you don't even need graphical interface to edit the files.
+Few advantages of LaTeX being mostly text files are that it is lightweight to share and easy to use with version control. And you don't even need graphical interface to edit the files.
 
 \section{File structure}
 
-In \LaTeX{} you use different commands, based on how would you like the output to look like. To tell it that the command (or macro) has started, the symbol \textbackslash{} is used. And since most macros need some specific amount of text to work on, we use curly braces \{ and \} to delimit that. In general, \{ and \} are used to feed mandatory arguments to functions while [ and ] are used to pass optional ones. For example, to make text italic, we would use \verb|\textit| command, which would look like the following: \verb|\textit{lorem ipsum}|.
+In LaTeX you use different commands, based on how would you like the output to look like. To tell it that the command (or macro) has started, the symbol \textbackslash{} is used. And since most macros need some specific amount of text to work on, we use curly braces \{ and \} to delimit that. In general, \{ and \} are used to feed mandatory arguments to functions while [ and ] are used to pass optional ones. For example, to make text italic, we would use \verb|\textit| command, which would look like the following: \verb|\textit{lorem ipsum}|.
 
 The comment glyph is \%. This means that everything from the first \% on the line until its end is completely ignored at compiling.
 
@@ -45,11 +45,11 @@ The third part is available for us to change document settings and define our ow
 
 And finally comes the content section. It is started with \verb|\begin{document}| and ended with \verb|\end{document}|. Nothing before the former or after the latter will be directly shown. Even more, anything that comes after \verb|\end{document}| is completely ignored; the compiler stops right then and there.
 
-In the main part, you are free to write your content and use macros. However, there are a few things to keep in mind. First of all, \LaTeX{} ignores all whitespace. That means that no matter how many    spaces   you enter, in the output there will be only one. Any spaces at the beginning/end of the line is completely ignored. Even line breaks are ignored. This is great, because you can structure the original file so that it it easier to read, while not changing the output at all. If you do, however, want a line break, you can force that by using \textbackslash \textbackslash . To start a new paragraph, just leave one line blank in between. But if you want more space between different parts of your text, forget all of multi-space/multi-new line workarounds. With \LaTeX{} you have commands for that as well.  
+In the main part, you are free to write your content and use macros. However, there are a few things to keep in mind. First of all, LaTeX ignores all whitespace. That means that no matter how many    spaces   you enter, in the output there will be only one. Any spaces at the beginning/end of the line is completely ignored. Even line breaks are ignored. This is great, because you can structure the original file so that it it easier to read, while not changing the output at all. If you do, however, want a line break, you can force that by using \textbackslash \textbackslash . To start a new paragraph, just leave one line blank in between. But if you want more space between different parts of your text, forget all of multi-space/multi-new line workarounds. With LaTeX you have commands for that as well.  
 
 \subsection{Whitespace}
 
-To produce additional whitespace, you have a few macros at your disposal, all of which take one argument, that is amount of whitespace to apply. \LaTeX{} can understand the following units by default:
+To produce additional whitespace, you have a few macros at your disposal, all of which take one argument, that is amount of whitespace to apply. LaTeX can understand the following units by default:
 
 \begin{description}
   \item[pt]  point         (1\,in = 72.27\,pt)
@@ -65,7 +65,7 @@ To produce additional whitespace, you have a few macros at your disposal, all of
 
 Two most commonly used spacing macros are \verb|\hspace| and \verb|\vspace| that will insert horizontal and vertical space respectively. If however, a line or page break would occur at a point where either command is used, no whitespace is inserted at all. To force it, append the command with \verb|*| (for example, \verb|\vspace*{20mm}|).
 
-If you wanted to fill larger amounts of space, \LaTeX{} offers \verb|\hfill| and \verb|\vfill| commands. When present, they will try to take up as much space as possible on the current line/page, while still leaving space for the remaining text. There are also two variants of the first command, \verb|\hrulefill| and \verb|\dotfill|, which will foll the space with a rule (line) or dots, instead of whitespace. The examples of all three are:
+If you wanted to fill larger amounts of space, LaTeX offers \verb|\hfill| and \verb|\vfill| commands. When present, they will try to take up as much space as possible on the current line/page, while still leaving space for the remaining text. There are also two variants of the first command, \verb|\hrulefill| and \verb|\dotfill|, which will foll the space with a rule (line) or dots, instead of whitespace. The examples of all three are:
 
 Lorem\hfill ipsum
 
@@ -79,7 +79,7 @@ Lorem \hfill \hfill ipsum \hfill dolor
 
 With the free space on the left twice as big as the one on the right.
 
-When it comes to formatting pure spaces, \LaTeX{} has a lot of freedom. For example, if a dot is after lowercase letter (i.e. ending a sentence) there will be a larger space than after a dot after an uppercase letter (i.e. after an initial). If we want to force a small space, for example after \verb|etc.|, \verb|Mr. Smith| and a lot others, we can do so by preceding the space with a \textbackslash, which will look like Mr.\ Smith as opposed to Mr. Smith. We also have a possibility of inserting even smaller space, by using \verb|\,|. This is used when connecting units to a number, for example 42\,ly against 42 ly.
+When it comes to formatting pure spaces, LaTeX has a lot of freedom. For example, if a dot is after lowercase letter (i.e. ending a sentence) there will be a larger space than after a dot after an uppercase letter (i.e. after an initial). If we want to force a small space, for example after \verb|etc.|, \verb|Mr. Smith| and a lot others, we can do so by preceding the space with a \textbackslash, which will look like Mr.\ Smith as opposed to Mr. Smith. We also have a possibility of inserting even smaller space, by using \verb|\,|. This is used when connecting units to a number, for example 42\,ly against 42 ly.
 
 Spaces also tell the compiler where he can make a line break shall the need arise. To avoid that we can use non-breaking space, which is marked by the character \verb|~| (\textasciitilde{}). It will look exactly the same, so if we write \verb|Example 7| and \verb|Example~8|, we will see no difference, unless a line break would fall exactly there. Our input would look like: Example 7 and Example~8.
 

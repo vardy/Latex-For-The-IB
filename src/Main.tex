@@ -1,0 +1,128 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage{packages}
+
+% Document Settings
+\geometry{margin=1in}
+\setlength{\parskip}{1ex}
+\setlength{\parindent}{0pt}
+
+% =========================================
+%             DOCUMENT
+% =========================================
+
+\begin{document}
+
+% =========================
+%      TITLE PAGE
+% =========================
+
+% Supresses headers, footers, and pagenumbers on titlepage.
+\begin{titlepage}
+\centering % Centers page
+\scshape % Small-caps text
+\vfill
+
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{\textwidth}{0.4pt}
+
+\vspace{1.5\baselineskip} % Whitespace
+\LARGE{LaTeX for the IB}\\
+\vspace{0.2\baselineskip}
+\small{\textit{Get a 7 with style.}}
+\vspace{0.75\baselineskip} % Whitespace
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+\rule{\textwidth}{1.6pt}
+
+\vfill
+\end{titlepage}
+
+% =========================
+%      DOCUMENT BODY
+% =========================
+
+\pagenumbering{roman}
+
+\begin{center}
+\Large{\textbf{Licensing and Contributors}}
+
+\vfill
+\small{\textit{OpenTextbooks, Coming Soon\texttrademark...}}
+\vfill
+
+\newpage
+\end{center}
+
+\begin{center}
+\pdfbookmark{\contentsname}{Contents}
+\tableofcontents
+\newpage
+\end{center}
+
+\pagenumbering{arabic}
+\section{What is LaTeX?}
+% Should be no more than half a page
+
+\section{Installing LaTeX}
+
+\subsection{Mac}
+
+\subsection{Windows}
+
+\subsection{Linux}
+
+\newpage
+\section{Writing LaTeX}
+
+\subsection{The Easy Way}
+
+\subsection{Editors and Other Goodies}
+
+\newpage
+\section{Fundementals}
+
+\subsection{Document Structure}
+
+\subsection{Basic Formatting}
+
+\subsection{Whitespace and Pages}
+
+\subsection{Headers, Footers and Page-numbers}
+
+\subsection{The Titlepage}
+
+\subsection{Contents, Bibliography and Appendices}
+
+\newpage
+\section{Writing Maths}
+
+\subsection{Math-Mode}
+
+\subsection{Maths Symbols}
+
+\newpage
+\section{Writing In Foreign Languages}
+
+\subsection{Spanish, French and Accents}
+
+\subsection{Asian Languages}
+
+\subsection{IPA and Miscellaneous}
+
+\newpage
+\section{Programming and Advanced LaTeX}
+
+\subsection{Turing Completeness}
+
+\subsection{Macros}
+
+\subsection{Writing Packages}
+
+\subsection{Writing Classes}
+
+\newpage
+\input{sections/Introduction}
+
+\end{document}
