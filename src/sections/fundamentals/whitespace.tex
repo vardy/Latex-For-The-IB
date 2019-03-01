@@ -1,0 +1,35 @@
+To produce additional whitespace, you have a few macros at your disposal, all of which take one argument, that is amount of whitespace to apply. LaTeX can understand the following units by default:
+
+\begin{description}
+  \item[pt]  point         (1\,in = 72.27\,pt)
+  \item[pc]  pica          (1\,pc = 12\,pt)
+  \item[in]  inch          (1\,in = 25.4\,mm)
+  \item[bp]  big point     (1\,in = 72\,bp)
+  \item[cm]  centimetre    (1\,cm = 10\,mm)
+  \item[mm]  millimetre
+  \item[dd]  didot point   (1157\,dd = 1238\,pt)
+  \item[cc]  cicero        (1\,cc = 12\,dd)
+  \item[sp]  scaled point  (65536\,sp = 1\,pt)
+\end{description}
+
+Two most commonly used spacing macros are \verb|\hspace| and \verb|\vspace| that will insert horizontal and vertical space respectively. If however, a line or page break would occur at a point where either command is used, no whitespace is inserted at all. To force it, append the command with \verb|*| (for example, \verb|\vspace*{20mm}|).
+
+If you wanted to fill larger amounts of space, LaTeX offers \verb|\hfill| and \verb|\vfill| commands. When present, they will try to take up as much space as possible on the current line/page, while still leaving space for the remaining text. \verb|\hfill| will create horisontal whitespace while \verb|\vfill| will create vertical one. There are also two variants of the first command, \verb|\hrulefill| and \verb|\dotfill|, which will foll the space with a rule (line) or dots, instead of whitespace. The examples of all three are:
+
+Lorem\hfill ipsum
+
+Dolor\hrulefill sit
+
+Amet\dotfill consectetur
+
+As a matter of fact, they act like springs, which means that where multiple occurences happen on a single line, they'll divide the space as evenly as possible. In the following example we use text, \verb|\hfill \hfill|, text, \verb|\hfill|, text and we get
+
+Lorem \hfill \hfill ipsum \hfill dolor
+
+With the free space on the left twice as big as the one on the right.
+
+When it comes to formatting pure spaces, \LaTeX{} has a lot of freedom. For example, if a dot is after lowercase letter (i.e.\ ending a sentence) there will be a larger space than after a dot after an uppercase letter (i.e.\ after an initial). If we want to force a small space, for example after \verb|etc.|, \verb|Mr. Smith| and a lot others, we can do so by preceding the space with a \textbackslash, which will look like Mr.\ Smith as opposed to Mr. Smith. We also have a possibility of inserting even smaller space, by using \verb|\,|. This is used when connecting units to a number, for example 42\,ly against 42 ly.
+
+Spaces also tell the compiler where he can make a line break shall the need arise. To avoid that we can use non-breaking space, which is marked by the character \verb|~| (\textasciitilde{}). It will look exactly the same, so if we write \verb|Example 7| and \verb|Example~8|, we will see no difference, unless a line break would fall exactly there. Our input would look like: Example 7 and Example~8.
+
+On the contrary, if we have a long word and want to specify where it can be broken (hyphenated) we can do this in three different ways. First of all, we can leave it up to \LaTeX{} and its internal hyphenating rules to do the job. Those rules depend on the language, topic that is discussed elsewhere. If we, however, want to bypass those rules, we can create an exception using \verb|\-| within the word. Say we have a word \verb|Baccalaureate| that might fall on the edge and has to be splitted up. We could write \verb|Ba\-cca\-la\-ureate| (in the final product this looks like Ba\-cca\-la\-ureate) which will let \LaTeX{} know where we allow it to split the word. This of course doesn't mean the word will be spplit there even in the middle of the line, but only if it will come at the edge. But if we think we will use certain word often, we can globally define new hyphenation, by using, yeah, you guessed it, \verb|\hyphenation command|. On the example before, it will look like \verb|\hyphenation{ba-cca-la-ureate}|. Henceforth, \LaTeX{} will use this rule. In general, if splitting will be necessary, it will first look within the word, shall there be no marks it will look for the global definition and if both are empty it will check how the hyphenation for this word is defined in the language definition.

@@ -1,0 +1,24 @@
+In LaTeX you use different commands, based on how would you like the output to look like. To tell it that the command (or macro) has started, the symbol \textbackslash{} is used. And since most macros need some specific amount of text to work on, we use curly braces \{ and \} to delimit that. In general, \{ and \} are used to feed mandatory arguments to functions while [ and ] are used to pass optional ones. For example, to make text italic, we would use \verb|\textit| command, which would look like the following: \verb|\textit{lorem ipsum}|.
+
+The comment glyph is \%. This means that everything from the first \% on the line until its end is completely ignored at compiling.
+
+At the beginning, we need to tell the compiler what kind of document will we be working on. We do this with the command \verb|\documentclass|. We need to provide the document class, but we can also specify font size, paper size and a few other things. Some of the more important available classes are
+
+\begin{description}
+  \item[article] for scientific articles, reports, documentation \ldots
+  \item[report] for longer reports split into multiple chapters, smaller books and simmilar
+  \item[book] for actual, proper books
+  \item[memoir] is based on \verb|book| class, but you have a lot of freedom when it comes to changing the output (whether or not is this a good thing is a topic for another time)
+  \item[letter] for writing letters
+  \item[beamer] for creating presentations
+\end{description}
+
+For example, this document uses the following setup: \verb|\documentclass[12pt,a4paper]{article}|. This means it's written as an article, default font size is 12\,pt and size of the paper is a4. Since there is no orientation specified, portrait is used by default.
+
+After that, comes the time for including different packages. They usually provide pre-written macros that will either be used later on while writing or will help us format the document the way we like. That is done with \verb|\includepackage| command, where we need to tell what package we want and optionally give it parameters. Few of the most used packages would probably be \verb|inputenc| with \verb|utf8| option, to enable international characters, \verb|geometry| to set up page layout (especially page margins) and, if you are working in another language, \verb|babel|. The example of the first one would be \verb|\includepackage[utf8]{iinputenc}|.
+
+The third part is available for us to change document settings and define our own macros.
+
+And finally comes the content section. It is started with \verb|\begin{document}| and ended with \verb|\end{document}|. Nothing before the former or after the latter will be directly shown. Even more, anything that comes after \verb|\end{document}| is completely ignored; the compiler stops right then and there.
+
+In the main part, you are free to write your content and use macros. However, there are a few things to keep in mind. First of all, LaTeX ignores all whitespace. That means that no matter how many    spaces   you enter, in the output there will be only one. Any spaces at the beginning/end of the line is completely ignored. Even line breaks are ignored. This is great, because you can structure the original file so that it it easier to read, while not changing the output at all. If you do, however, want a line break, you can force that by using \textbackslash \textbackslash . To start a new paragraph, just leave one line blank in between. But if you want more space between different parts of your text, forget all of multi-space/multi-new line workarounds. With LaTeX you have commands for that as well.  
