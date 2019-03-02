@@ -2,6 +2,7 @@
 % What does it mean to program in LaTeX
 
 \subsection{Basic Macros}
+There are a number of ways to define new macros however the most basic is the \verb=\newcommand= macro. This takes two arguments, the name of the new macro and what it expands to. Say I wanted to define a basic macro that expands to some text. The basic way to do this would be something like as follows. \verb=\newcommand{\hello}{Hello, World!}=. Because a macro is considered to be only a single value, the first pair of braces are actually not required though it can make the definition more confusing to read. If you were to remove those braces then the definition would look like \verb=\newcommand\hello{Hello, World!}=. This macro only allow defining a new macro, if you wish to redefine a preexisting macro, whether defined ourselves or by another package, a different command must be used which is \verb=\renewcommand=.
 \subsubsection{Parameters}
 \subsubsection{Optional Parameters}
 \subsubsection{Macro Expansion Order}
