@@ -13,7 +13,11 @@ At the beginning, we need to tell the compiler what kind of document will we be 
   \item[beamer] for creating presentations
 \end{description}
 
-For example, this document uses the following setup: \verb|\documentclass[12pt,a4paper]{article}|. This means it's written as an article, default font size is 12\,pt and size of the paper is a4. Since there is no orientation specified, portrait is used by default.
+For example, this document uses the following setup:
+\begin{verbatim}
+    \documentclass[12pt,a4paper]{article}
+\end{verbatim}
+This means it's written as an article, default font size is 12\,pt and size of the paper is a4. Since there is no orientation specified, portrait is used by default.
 
 After that, comes the time for including different packages. They usually provide pre-written macros that will either be used later on while writing or will help us format the document the way we like. That is done with \verb|\includepackage| command, where we need to tell what package we want and optionally give it parameters. Few of the most used packages would probably be \verb|inputenc| with \verb|utf8| option, to enable international characters, \verb|geometry| to set up page layout (especially page margins) and, if you are working in another language, \verb|babel|. The example of the first one would be \verb|\includepackage[utf8]{iinputenc}|.
 

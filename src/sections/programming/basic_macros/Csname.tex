@@ -1,1 +1,13 @@
-
+Sometimes, there is a need to use a macro with a name based on another macro. Let's say that we want to have a command that allows a user to set and recall values in a dictionary. Let's define a macro \verb=\dictstore{name}{key}{value}= that stores a value associated with a key in a named dictionary and another macro \verb=\dictget{name}{key}= to retrieve that value. Internally to our system, we would like to store the values in macro with the format \verb=\dict-name-key=. Here is how the first of these these would be defined:
+\begin{verbatim}
+    \newcommand{\dictstore}[3]{
+        \expandafter\renewcommand{\csname dict-#1-#2 \endcsname}{#3}
+    }
+\end{verbatim}
+Let's look at how this works. We define a new macro called \verb=\dictstore= that takes three arguments. That macro then has an expand after which expands the =\verb=\csname= first. This takes the \verb=dict-#1-#2= and expands them then changes the \hyperref[section:programming/advancedFeatures/catcodes]{Category Code} so that it is interpreted by \verb=\renewcommand= as a macro to define rather than text. The \verb=\dictget= macro would then be defined in a similar fashion:
+\begin{verbatim}
+    \newcommand{\dictget}[2]{
+        \csname dict-#1-#2 \endcsname
+    }
+\end{verbatim}
+Note that no \verb=\expandafter= is needed as we are simply returning a macro rather than defining anything.
