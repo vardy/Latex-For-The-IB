@@ -1,0 +1,5 @@
+It is possible to add a single optional parameter using the command we have used before. This is used be declaring the total number of parameters and then adding a default value for the first one. An example of this would be:
+\begin{verbatim}
+    \newcommand{\hello}[2][world]{Hello #1, my name is #2.}
+\end{verbatim}
+If the command is used with just the one parameter, then \verb=#1= would default to ``world'' with the first parameter being \verb=#2=, otherwise, if there were two parameters, the first parameter would be \verb=#1= like normal. There is one special rule to follow, if the optional parameter is being used, then it must me enclosed by brackets rather than braces. If using the macro defined above, to have the same output as the one used in the previous section, the following macro would be used. \verb=\hello[Sarah]{Bryce}=. There ways to define macros with more than one optional parameter which is covered in \hyperref[section:programming/macros/otherWays]{Other Ways to Define Macros}.
