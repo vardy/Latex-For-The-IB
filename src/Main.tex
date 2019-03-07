@@ -64,12 +64,9 @@
 \pagenumbering{arabic}
 
 \section{What is LaTeX?}
-% Should be no more than half a page
-\input{sections/What_is}
 
-% Actual Chapters
+\include{sections/What_is_Latex}
 
-\include{sections/WhatIsLatex}
 
 \newpage
 \section{Writing LaTeX}
@@ -78,30 +75,11 @@
 
 \subsection{Editors and Other Goodies}
 
-\newpage
-\section{Fundementals}
 
-\subsection{Document Structure}
-\input{sections/fundamentals/Document_structure}
+\include{sections/Fundamentals}
 
-\subsection{Basic Formatting}
+\include{sections/Math}
 
-\subsection{Whitespace and Pages}
-\input{sections/fundamentals/Whitespace}
-
-\subsection{Headers, Footers and Page-numbers}
-
-\subsection{The Titlepage}
-
-\subsection{Contents, Bibliography and Appendices}
-
-\newpage
-\section{Writing Maths}
-
-\subsection{Math-Mode}
-\input{sections/maths/Math_mode}
-
-\subsection{Maths Symbols}
 
 \newpage
 \section{Writing In Foreign Languages}
@@ -122,8 +100,5 @@
 \subsection{Writing Packages}
 
 \subsection{Writing Classes}
-
-% About LaTeX
-\include{sections/Introduction}
 
 \end{document}

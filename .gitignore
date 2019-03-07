@@ -29,3 +29,6 @@
 
 src/Main.pdf
 /test/
+
+# macOS's annoying file
+.DS_Store
