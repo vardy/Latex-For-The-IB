@@ -85,4 +85,32 @@ However, we (\href{https://www.overleaf.com/learn/latex/Chemistry_formulae}{and 
 recommend using \verb|\usepackage{chemfig}| for drawing molecules and other figures.
 
 \subsection{Structuring your documents}
+You can go on a couple of ways to structure your documents.
+This part is just to make your code more aesthetically pleasing for you to look at it,
+as well as being more organized.
+This part just covers coding conventions which are arbitrary to some extent.
+
+\begin{itemize}
+\item Single file projects: Generally for IAs you'd like to write it as a single file if you wanna keep it simple.
+Most of the times, there isn't really a reason to write multiple files unless you know what you're doing.
+\item Multiple files projects: You can also write your IA / EE in multiple files, a file per section.
+meaning that you will have a main file and is a bit more advanced when it comes to managing files and whatnot.
+However, this strategy is better for EEs or IAs where you have a lot of graphs
+and thus recompiling the whole file each time will be more time consuming.
+Looking at the code of this guide might help you get an idea of what those projects look like.
+Also you can check out \href{https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects}{Overleaf's guide}
+on the matter for a lot more details which are targeted for very large \LaTeX{} projects.
+\item Image folder: Generally you'd like to store your images in a folder
+in order to note clutter up your main folder.
+This is also why we have \verb|\graphicspath{ {./images/} }| in the boilerplate example.
+\end{itemize}
+
+There are also other conventions when it comes to writing \LaTeX{} code.
+Although it's convenient to write a paragraph per line, provided that your IDE has appropriate text wrapping,
+some people believe that manually breaking a line by pressing the enter key is useful,
+since it doesn't really affect the pdf generated,
+but it does help people who're looking at the github code, since they wouldn't have to scroll sideways 8 kilometers.
+Keeping in mind that the IA and EE code aren't generally going to be published,
+we're not going to recommend using a specific writing style;
+but we believe it's better to pick up the good practices early on just in case.
 
