@@ -1,6 +1,53 @@
 \section{Writing your documents}
+In this section we will focus on the essential tables / graphs you'll need when writing an IA.
 
 \subsection{Tables}
+\href{https://www.overleaf.com/learn/latex/Tables}{Overleaf's documentation on tables}
+already provides almost everything you need to write a table.
+\href{https://www.tablesgenerator.com/}{This website} generates \LaTeX{} tables
+if you would like some sort of GUI assistance when dealing with tables.
+But this guide is to offer boilerplate, so here's one for raw data tables
+(note: this boilerplate requires the inclusion of the packages mentioned in packages section):
+\begin{verbatim}
+\begin{table}[H]
+\begin{tabu} to \textwidth {X[c]X[c]X[c]X[c]X[c]X[c]X[c]X[c]}
+\hline
+\multirow{2}{*}{\parbox{2cm}{IV}}&
+\multicolumn{6}{c}{Table Title} \\
+\cline{2-8}
+& Trial 1 & Trial 2 & Trial 3 & Trial 4 & Trial 5 & Average & Uncert \\
+\hline
+value & value & value & value & value & value & value & value \\
+ & & & & & & & \\
+ & & & & & & & \\
+ & & & & & & & \\
+ & & & & & & & \\
+\hline
+\end{tabu}
+\caption{Table caption}
+\end{table}
+\end{verbatim}
+Resulting table:
+\begin{table}[H]
+\begin{tabu} to \textwidth {X[c]X[c]X[c]X[c]X[c]X[c]X[c]X[c]}
+\hline
+\multirow{2}{*}{\parbox{2cm}{IV}}&
+\multicolumn{6}{c}{Table Title} \\
+\cline{2-8}
+& Trial 1 & Trial 2 & Trial 3 & Trial 4 & Trial 5 & Average & Uncert \\
+\hline
+value & value & value & value & value & value & value & value \\
+ & & & & & & & \\
+ & & & & & & & \\
+ & & & & & & & \\
+ & & & & & & & \\
+\hline
+\end{tabu}
+\caption{Table caption}
+\end{table}
+
+Just note that tables are highly customizable and we highly recommend
+that you read Overleaf's guide as it will allow you to better understand the code we've used.
 
 \subsection{Graphs}
 
