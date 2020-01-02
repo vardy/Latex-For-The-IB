@@ -17,4 +17,62 @@
 %
 \section{Miscellaneous}
 \subsection{French and Spanish support}
-\subsection{Extended Essay Title page}
+Now if you're a part of the small amount of people who do IB in either French or Spanish,
+you can configure \LaTeX{} in order to adapt to the language environment.
+There are things like transforming transforming the dot to commas when it comes to writing numbers,
+changing the table names and whatnot. For more details
+\href{https://www.overleaf.com/learn/latex/French}{here's the Overleaf link for French}
+and \href{https://www.overleaf.com/learn/latex/Spanish}{this is for Spanish.}
+
+This sums up what you need to put in the preamble but we've found out that (in French at least),
+some things aren't implemented. For example when it comes to writing numbers in math mode,
+the dot isn't turned into a comma. Yes you can commas in numbers, but there's this unnecessary space after the comma.
+By putting 
+\begin{verbatim}
+\mathchardef\period=\mathcode`.
+\DeclareMathSymbol{.}{\mathord}{letters}{"3B}
+\end{verbatim}
+in the preamble, the dots in the math mode numbers would automatically turn into commas.
+Another solution is to put all your numbers in \verb|\nombre{}|.
+
+Tables' captions are also left as ``Table'' (instead of Tableau), you can also put that code in the preamble to fix this
+\begin{verbatim}
+\addto\captionsfrench{\def\tablename{Tableau}}
+\end{verbatim}
+
+Last thing is you use \verb|\og \fg{}| instead of quotes in order to use the French quotes.
+\subsection{Extended Essay Title Page}
+Here's the boilerplate code for the EE title page:
+\begin{verbatim}
+\begin{titlepage}
+    \begin{center}
+        
+        EE group\\
+        Subject
+        
+        \vspace*{4cm}
+ 
+        \textbf{Title:}\\
+        Insert title here
+        \vspace{1cm}
+
+        \textbf{RQ:}\\
+        Insert RQ here
+        \vspace{4cm}
+
+
+        Word count:
+ 
+        \vfill
+ 
+ 
+        \vspace{0.1cm}
+ 
+ 
+       Year session
+ 
+    \end{center}
+\end{titlepage}
+\end{verbatim}
+We would like to note that this isn't the only way to write a title page,
+but it's one way and you can change it to your liking if you want to.
