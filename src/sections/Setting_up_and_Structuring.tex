@@ -1,0 +1,133 @@
+% Copyright 2018-2020 ImmortalPharaoh7, Bryce AS202313
+%
+% This file is part of Latex-For-The-IB.
+%
+% Latex-For-The-IB is free software: you can redistribute it and/or modify it
+% under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% Latex-For-The-IB is distributed in the hope that it will be useful, but
+% WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+% General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with Latex-For-The-IB. If not, see http://www.gnu.org/licenses/.
+%
+\section{Setting up and Structuring}
+\subsection{Useful packages}
+Once you have your environment set up,
+you're gonna have to add packages and configure things
+in the preamble in order to respect the guidelines
+(things like double spacing and whatnot).
+Below is a example of what you generally will need in a preamble.
+\begin{verbatim}
+\documentclass[a4paper, 12pt]{article}
+
+%Paragraph jumps and indentation
+\setlength{\parskip}{1.6em}
+\setlength{\parindent}{1.25cm}
+
+%Border
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+
+%Double spacing
+\usepackage{setspace}
+\doublespacing
+
+%Packages
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{titlesec}
+
+%Images
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{wrapfig}
+\usepackage{float}
+
+%Tables
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabu}
+
+\titleformat{\section}
+{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+%Equation numbering
+\counterwithin{equation}{section}
+
+\usepackage{hyperref}
+\urlstyle{same}
+\end{verbatim}
+Now a lot of those are quite straightforward and are just there to save time.
+This is the point of this guide, to save you some time.
+Packages related to tables and images will be talked about in later sections of this guide.
+
+\verb|\usepackage[dvipsnames]{xcolor}| allows you to color your text,
+which is generally useful for links since they aren't automatically colored.
+More details over on \href{https://www.overleaf.com/learn/latex/Using_colours_in_LaTeX}{Overleaf's page}.
+
+\verb|\usepackage{amsmath}| add maths symbols and environments like matrices,
+while\\ \verb|\usepackage{mathtools}| adds tools to make things like long fractions aesthetically pleasing.
+More details on mathtools are over on
+\href{https://www.overleaf.com/learn/latex/Articles/Mathtools_-_for_beautiful_math}{Overleaf's page}.
+
+\verb|\usepackage{titlesec}| allows you to configure the space between sections and subsections.
+It's also used if you want to customize your sections or subsections.
+We've used it in the example above (starting from \verb|\titleformat{\section}|)
+to reduce the space after sections.
+Since you have a hard 12 page limit in your G4 IAs,
+might as well remove any unnecessary space before reducing word count.
+
+\verb|\usepackage{hyperref}| allows you to add hyperlinks in your document,
+whether those are for navigating your documents or to link websites.
+We're using this right now to link you to
+\href{https://www.overleaf.com/learn/latex/Hyperlinks}{Overleaf's documentation on hyperlinks}.
+
+That's not all! There are other useful packages for G4 subjects,
+which don't need to be in every preamble.
+
+We recommend using \verb|\usepackage{siunitx}| when it comes to writing a physics IA,
+since it provides a straightforward way to use SI and other units.
+Which can be pretty handy.
+
+We recommend using \verb|\usepackage[version=4]{mhchem}| for writing chemical reactions and formulas.
+However, we (\href{https://www.overleaf.com/learn/latex/Chemistry_formulae}{and Overleaf})
+recommend using \verb|\usepackage{chemfig}| for drawing molecules and other figures.
+
+\subsection{Structuring your documents}
+You can go on a couple of ways to structure your documents.
+This part is just to make your code more aesthetically pleasing for you to look at it,
+as well as being more organized.
+This part just covers coding conventions which are arbitrary to some extent.
+
+\begin{itemize}
+\item Single file projects: Generally for IAs you'd like to write it as a single file if you wanna keep it simple.
+Most of the times, there isn't really a reason to write multiple files unless you know what you're doing.
+\item Multiple files projects: You can also write your IA / EE in multiple files, a file per section.
+meaning that you will have a main file and is a bit more advanced when it comes to managing files and whatnot.
+However, this strategy is better for EEs or IAs where you have a lot of graphs
+and thus recompiling the whole file each time will be more time consuming.
+Looking at the code of this guide might help you get an idea of what those projects look like.
+Also you can check out \href{https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects}{Overleaf's guide}
+on the matter for a lot more details which are targeted for very large \LaTeX{} projects.
+\item Image folder: Generally you'd like to store your images in a folder
+in order to note clutter up your main folder.
+This is also why we have \verb|\graphicspath{ {./images/} }| in the boilerplate example.
+\end{itemize}
+
+There are also other conventions when it comes to writing \LaTeX{} code.
+Although it's convenient to write a paragraph per line, provided that your IDE has appropriate text wrapping,
+some people believe that manually breaking a line by pressing the enter key is useful,
+since it doesn't really affect the pdf generated,
+but it does help people who're looking at the github code, since they wouldn't have to scroll sideways 8 kilometers.
+Keeping in mind that the IA and EE code aren't generally going to be published,
+we're not going to recommend using a specific writing style;
+but we believe it's better to pick up the good practices early on just in case.
+
