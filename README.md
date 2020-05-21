@@ -17,7 +17,7 @@ Here's a list of the people who contributed to writing and formatting the guide.
 
 | **Name** | **Discord Tag** | **Email** 
 | :---:     |    :---:   |  :---:
-| [**Jarred Vardy**](https://github.com/vardy) | pants#3891 | jarred.vardy@gmail.com
+| [**Jarred Vardy**](https://github.com/vardy) | pants#3891 | vardy@riseup.net
 |[**ImmortalPharaoh7**](https://github.com/ImmortalPharaoh7) | ImmortalPharaoh7#7811| pharaoh.immortal7@gmail.com
 |[**BryceAS202313**](https://github.com/BryceAS202313) | Bryce#0873 | bryce@thenetworknerds.ca
 |[**Lenart Bucar**](https://github.com/LenartBucar)
