@@ -1,4 +1,4 @@
-% Copyright 2018-2020 ImmortalPharaoh7
+% Copyright 2018-2020 ImmortalPharaoh7, Lynn Gu
 %
 % This file is part of Latex-For-The-IB.
 %
@@ -59,6 +59,48 @@ value & value & value & value & value & value & value & value \\
  & & & & & & & \\
  & & & & & & & \\
 \hline
+\end{tabu}
+\caption{Table caption}
+\end{table}
+
+The package \texttt{booktabs} allow for more elegant typesetting of three-lined tables (but also more commands to memorize); don't forget to load the package in the preamble!
+
+The same raw data table was redesigned with \texttt{booktabs} below.
+
+\begin{verbatim}
+  \begin{table}[H]
+  \begin{tabu} to \textwidth {X[c]X[c]X[c]X[c]X[c]X[c]X[c]X[c]}
+  \toprule
+  \multirow{2}{*}{\parbox{2cm}{IV}}&
+  \multicolumn{6}{c}{DV} \\
+  \cmidrule{2-8}
+  & Trial 1 & Trial 2 & Trial 3 & Trial 4 & Trial 5 & Average & Uncert \\
+  \midrule
+  value & value & value & value & value & value & value & value \\
+    & & & & & & & \\
+    & & & & & & & \\
+    & & & & & & & \\
+    & & & & & & & \\
+  \bottomrule
+  \end{tabu}
+  \caption{Table caption}
+  \end{table}
+\end{verbatim}
+
+\begin{table}[H]
+\begin{tabu} to \textwidth {X[c]X[c]X[c]X[c]X[c]X[c]X[c]X[c]}
+\toprule
+\multirow{2}{*}{\parbox{2cm}{IV}}&
+\multicolumn{6}{c}{DV} \\
+\cmidrule{2-8}
+& Trial 1 & Trial 2 & Trial 3 & Trial 4 & Trial 5 & Average & Uncert \\
+\midrule
+value & value & value & value & value & value & value & value \\
+  & & & & & & & \\
+  & & & & & & & \\
+  & & & & & & & \\
+  & & & & & & & \\
+\bottomrule
 \end{tabu}
 \caption{Table caption}
 \end{table}
@@ -294,6 +336,21 @@ coordinates {
 \end{tikzpicture}
 \end{center}
 \end{figure}
+
+\subsection{Chemical formulae and equations}
+In IB chemistry IAs and EEs, well-represented chemical formulae can help you stand out. The package \texttt{mhchem} offers support for chemical formulae and equations. A detailed tutorial of \texttt{mhchem} is offered \href{http://mirrors.ctan.org/macros/latex/contrib/mhchem/mhchem.pdf}{here}, and below are some examples.
+
+\begin{verbatim}
+  \ce{H2(g) + 1/2O2(g) ->[heat] H2O(l)}
+
+  \ce{CuSO4*5H2O}
+\end{verbatim}
+
+These code render the following results:
+
+\ce{H2(g) + 1/2O2(g) ->[heat] H2O(l)}
+
+\ce{CuSO4*5H2O}
 
 \subsection{BibLaTeX}
 BibLaTeX is used for your citations and bibliographies.
