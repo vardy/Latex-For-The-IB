@@ -1,4 +1,4 @@
-% Copyright 2018-2020 ImmortalPharaoh7, Bryce AS202313
+% Copyright 2018-2020 ImmortalPharaoh7, Bryce AS202313, Lynn Gu
 %
 % This file is part of Latex-For-The-IB.
 %
@@ -50,9 +50,17 @@ Below is a example of what you generally will need in a preamble.
 \usepackage{float}
 
 %Tables
+\usepackage{float}
 \usepackage{multirow}
 \usepackage{array}
 \usepackage{tabu}
+
+%Graphs
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.5}
+
+%Chemistry support
+\usepackage{mhchem}
 
 \titleformat{\section}
 {\normalfont\large\bfseries}{\thesection}{1em}{}

@@ -21,3 +21,4 @@ Here's a list of the people who contributed to writing and formatting the guide.
 |[**ImmortalPharaoh7**](https://github.com/ImmortalPharaoh7) | ImmortalPharaoh7#7811| pharaoh.immortal7@gmail.com
 |[**BryceAS202313**](https://github.com/BryceAS202313) | Bryce#0873 | bryce@thenetworknerds.ca
 |[**Lenart Bucar**](https://github.com/LenartBucar)
+|[**Lynn Gu**](https://github.com/lynn-gu) | 1ynn\\.gu#5090
